@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alarm Clock</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <div class="clock">
+            <img src="clock.png" alt="">
+            <div class="time">
+                <span id="hour"></span>:
+                <span id="minute"></span>:
+                <span id="second"></span>:
+                <span id="ampm"></span>
+            </div>
+            <div class="options">
+                <div class="option hour">
+                    <select id="hour-option">
+                        <option>Hour</option>
+                    </select>
+                </div>
+                <div class="option minute">
+                    <select id="minute-option">
+                        <option>Minute</option>
+                    </select>
+                </div>
+                <div class="option ampm">
+                    <select id="ampm-option">
+                        <option>AM/PM</option>
+                    </select>
+                </div>
+            </div>
+            <button>Set Alarm</button>
+        </div>
+    </div>
+</body>
+</html>

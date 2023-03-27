@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.container, .clock, .options {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container {
+    background: #230531;
+    max-width: 100%;
+    min-height: 100vh;
+    color: #eee;
+}
+
+.clock {
+    max-width: 400px;
+    width: 100%;
+    background: #571675;
+    padding: 30px;
+    flex-flow: column wrap;
+    border-radius: 20px;
+    box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.5);
+}
+
+.clock img {
+    width: 150px;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.time {
+    background: #1e023f;
+    line-height: calc(50px - 30px);
+    padding: 15px;
+    font-size: 2em;
+    height: 50px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    text-shadow: 0 2px 2px rgba(255, 255, 255, 0.5);
+}
+
+.options {
+    width: 100%;
+    height: 50px;
+    justify-content: space-between;
+}
+
+.options > .option {
+    background: #fff;
+    border-radius: 5px;
+    width: calc(100% / 3 - 3px);
+    height: calc(40px - 5px);
+}
+
+.options > .option > select {
+    width: 100%;
+    height: 100%;
+    padding: 0 10px;
+    font-size: 0.95em;
+    font-weight: 600;
+    outline: none;
+    border: none;
+    background: none;
+}
+
+.options > .option > select.disabled {
+    pointer-events: none;
+    opacity: 0.95;
+    user-select: none;
+}
+
+button {
+    position: relative;
+    width: 100%;
+    height: 45px;
+    font-size: 1.2em;
+    background: #230531;
+    color: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+button::before {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 45px;
+    background: #ffffff50;
+    transform: skewX(41deg);
+    top: 0;
+    left: 10px;
+    opacity: 0;
+    transition: left 0.5s, opacity 0.4s;
+}
+
+button:hover {
+    background: #23053198;
+}
+
+button:hover::before {
+    opacity: 1;
+    left: calc(50% - 20px);
+}
